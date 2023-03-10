@@ -5,8 +5,15 @@ import { ImageGalleryItem } from '../ImageGalleryItem/ImageGalleryItem';
 export const ImageGallery = ({ images }) => {
   return (
     <Layout>
-      {images.map(image => {
-        return <ImageGalleryItem key={image.id} image={image} />;
+      {images.map((image, id) => {
+        const isFirstLoadedImage = images.length - 12 === id;
+        return (
+          <ImageGalleryItem
+            key={image.id}
+            image={image}
+            isScrollAnchor={isFirstLoadedImage}
+          />
+        );
       })}
     </Layout>
   );
