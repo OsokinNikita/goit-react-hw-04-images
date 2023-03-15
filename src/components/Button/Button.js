@@ -1,6 +1,5 @@
 import PropTypes from 'prop-types';
-import { LoadButton } from './Button.styled';
-import { LoadSpan } from './Button.styled';
+import { LoadButton, LoadSpan } from './Button.styled';
 
 export const Button = ({ onClick }) => {
   return (
